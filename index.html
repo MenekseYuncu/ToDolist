@@ -25,7 +25,7 @@
             var i;
                 for (i = 0; i < list.length; i++) {
                     var span = document.createElement("SPAN");
-                    var txt = document.createTextNode("\u00D7");
+                    var txt = document.createTextNode("\u00D7"); //00D7 X işareti
                     span.className = "close";
                     span.appendChild(txt);
                     list[i].appendChild(span);
@@ -42,10 +42,10 @@
                 }
             
             // Bir liste öğesine tıklandığında "işaretli" bir sembol ekle
-            var list = document.querySelector('ul');
+            var list = document.querySelector('ul');      //seçili sütun querySelector
                 list.addEventListener('click', function(ev) {
                     if (ev.target.tagName === 'LI') {
-                    ev.target.classList.toggle('checked');
+                    ev.target.classList.toggle('checked'); //toggle div içindeki sütunu blirler
                     }
                 }, false);
             
@@ -56,14 +56,14 @@
                 var t = document.createTextNode(inputValue);
                   li.appendChild(t);
                     if (inputValue === '') {
-                    alert("Birşeyler yazmalısın!");
+                    alert("Bir şeyler yazmalısın!");
                     } else {
                     document.getElementById("myUL").appendChild(li);
                     }
                     document.getElementById("myInput").value = "";
                 
                 var span = document.createElement("SPAN");
-                var txt = document.createTextNode("\u00D7");
+                var txt = document.createTextNode("\u00D7");  //X
                 span.className = "close";
                 span.appendChild(txt);
                 li.appendChild(span);
